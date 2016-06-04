@@ -21,9 +21,9 @@ class Bullet {
         bulletX+=1000;
       }
    }
-   void bulletMove(bulletX) {
-       bulletX+5;
-   }
+  // void bulletMove(bulletX) {
+      // bulletX+5;
+  // }
 }
 
 //bar is always red, gets more/less green
@@ -129,12 +129,12 @@ if (h< 450){ //if he's up too high, get some gravity
 image(arma, 300,h); //h for da mad hopz
 
 if (c == 900){
-  fill (0,255,0);
+  fill (255,0,0);
   stroke(0);
   rect (300, h -50, 200, 10); // hit points bar!!!
   rect (850, 400, 200, 10); // enemy hp!!!
   // if either gets hit, make bar red
-  fill (255,0,0);
+  fill (0,255,0);
   stroke(0);
   /*if (ahp== 0){
     fill (255,0,0);
@@ -147,19 +147,19 @@ if (c == 900){
     rect (300, 400, 200, 10); //also kill him too
     //make him drop something like coins or a sombrero with powers
   }*/
-  /*if (ahp > 0){
+  if (ahp > 0){
     rect (300, h-50, ahp, 10); 
-  }*/
+  }
   if (chp > 0){
-    rect (850+chp, 400, chp, 10); //MAYBE 850+CHP!!! if doesn't work, take out first chp here
+    rect (850, 400, chp, 10); //MAYBE 850+CHP!!! if doesn't work, take out first chp here
     //work on this in the morning. if chp is 
     //replaced with 50, it works. make it like the
     //value of chp but like starting from the right
     //so the left is green
   }
   
-  ahp -= 10; // 10 shots to kill arma
-  chp -= 25; // 8 to kill chiboss// easier to kill chihuahua
+  ahp -= 1; // 10 shots to kill arma
+  chp -= 2.5; // 8 to kill chiboss// easier to kill chihuahua
 }
 
 
